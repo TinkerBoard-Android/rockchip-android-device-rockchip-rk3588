@@ -70,8 +70,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sdkversion = $(CURRENT_SDK_VERSION) \
     vendor.gralloc.disable_afbc = 0
 
+ifneq ($(BOARD_CAMERA360_SUPPORT),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
+endif
 
 #
 # add Rockchip properties here

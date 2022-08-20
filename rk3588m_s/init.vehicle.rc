@@ -1,0 +1,20 @@
+#camera360
+on property:persist.sys.camera360=1
+   chmod 666 /dev/video0
+   chmod 666 /dev/video1
+   chmod 666 /dev/video2
+   chmod 666 /dev/video3
+
+on property:persist.sys.camera360=2
+   chmod 660 /dev/video0
+   chmod 660 /dev/video1
+   chmod 660 /dev/video2
+   chmod 660 /dev/video3
+
+service camera360 /system/bin/camera360.sh
+     disabled
+     oneshot
+
+on property:sys.boot_completed=1
+   start camera360
+

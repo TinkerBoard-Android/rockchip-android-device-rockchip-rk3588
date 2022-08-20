@@ -1,0 +1,84 @@
+# See https://android.googlesource.com/platform/ndk/+/master/docs/PlatformApis.md
+libandroid.so
+libaaudio.so
+libamidi.so
+libbinder_ndk.so
+libc.so
+libcamera2ndk.so
+libdl.so
+libEGL.so
+libGLESv1_CM.so
+libGLESv2.so
+libGLESv3.so
+libicu.so
+libicui18n.so
+libicuuc.so
+libjnigraphics.so
+liblog.so
+libmediandk.so
+libm.so
+libnativehelper.so
+libnativewindow.so
+libneuralnetworks.so nopreload
+libOpenMAXAL.so
+libOpenSLES.so
+libRS.so
+libstdc++.so
+libsync.so
+libvulkan.so
+libwebviewchromium_plat_support.so
+libz.so
+libxml2.so nopreload
+libui.so nopreload
+libbinder.so nopreload
+libcutils.so nopreload
+libcamera_client.so nopreload
+libgui.so nopreload
+libjpeg.so nopreload
+libion.so nopreload
+libdl.so nopreload
+libexpat.so nopreload
+libhardware.so nopreload
+liblog.so nopreload
+libdrm.so nopreload
+libgralloctypes.so nopreload
+libcamera_metadata.so nopreload
+libfmq.so nopreload
+libsync.so nopreload
+libjpeg.so nopreload
+libtinyxml2.so nopreload
+libbase.so nopreload
+libGLESv2.so nopreload
+libEGL.so nopreload
+android.hardware.graphics.allocator@2.0.so nopreload
+android.hardware.graphics.allocator@3.0.so nopreload
+android.hardware.graphics.allocator@4.0.so nopreload
+android.hardware.graphics.common-V2-ndk_platform.so nopreload
+android.hardware.graphics.common@1.2.so nopreload
+android.hardware.graphics.mapper@2.0.so nopreload
+android.hardware.graphics.mapper@2.1.so nopreload
+android.hardware.graphics.mapper@3.0.so nopreload
+android.hardware.graphics.mapper@4.0.so nopreload
+libhidlbase.so nopreload
+libprocessgroup.so nopreload
+libvndksupport.so nopreload
+librga.so nopreload
+libdmabufheap.so nopreload
+libdexfile.so nopreload
+libopencv_world.so nopreload
+libopencv_core.so nopreload
+libopencv_imgcodecs.so nopreload
+libopencv_calib3d.so nopreload
+libopencv_features2d.so nopreload
+libopencv_imgproc.so nopreload
+libopencv_superres.so nopreload
+libopencv_ml.so nopreload
+libopencv_video.so nopreload
+libopencv_objdetect.so nopreload
+libopencv_videoio.so nopreload
+libopencv_flann.so nopreload
+libopencv_photo.so nopreload
+libopencv_videostab.so nopreload
+libopencv_highgui.so nopreload
+libopencv_shape.so nopreload
+libopencv_stitching.so nopreload

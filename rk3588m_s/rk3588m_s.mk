@@ -26,6 +26,7 @@ include device/rockchip/common/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3588/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, packages/apps/Camera360/camera360_etc.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
 PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -53,6 +54,13 @@ PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.reserved_plane_name=Esmart3-win0
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.env_xml_path=/vendor/etc/HwComposerEnv-multidisplay.xml
 
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/HwComposerEnv-multidisplay.xml:vendor/etc/HwComposerEnv-multidisplay.xml
+
+ifeq ($(BOARD_CAMERA360_SUPPORT),true)
+	PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/init.vehicle.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.vehicle.rc \
+	$(LOCAL_PATH)/camera360/camera360.sh:system/bin/camera360.sh \
+	$(LOCAL_PATH)/camera360/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+endif
 
 PRODUCT_PACKAGES += \
      modetest
