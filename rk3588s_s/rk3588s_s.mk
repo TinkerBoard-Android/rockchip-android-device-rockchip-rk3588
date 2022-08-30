@@ -45,3 +45,9 @@ PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.compose_policy=1
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
+
+#enable svep
+BOARD_USES_LIBSVEP := true
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.svep.mode=1
+#svep video policy, 0--no policy, 1--down 60fps video to 30fps when svep, 2--disable svep when 60fps video
+PRODUCT_PROPERTY_OVERRIDES += sys.svep.policy=1
