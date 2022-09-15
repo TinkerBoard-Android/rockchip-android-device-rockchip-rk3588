@@ -21,7 +21,7 @@ BOARD_USES_AB_IMAGE := false
 BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
 
 #car flag
-BOARD_ROCKCHIP_CAR := true
+BOARD_ROCKCHIP_VEHICLE := true
 
 #car boot.img need more large size
 BOARD_BOOTIMAGE_PARTITION_SIZE := 47259648
