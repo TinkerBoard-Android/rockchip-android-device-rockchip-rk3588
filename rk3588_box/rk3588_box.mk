@@ -64,7 +64,7 @@ BOARD_WITH_RKTOOLBOX := false
 
 # Google TV Service and frp overlay
 PRODUCT_USE_PREBUILT_GTVS := no
-BUILD_WITH_GOOGLE_FRP := false
+BUILD_WITH_GOOGLE_FRP := true
 
 BOARD_WITH_SPECIAL_PARTITIONS := baseparameter:1M,logo:16M
 

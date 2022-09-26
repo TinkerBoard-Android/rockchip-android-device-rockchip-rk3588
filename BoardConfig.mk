@@ -85,7 +85,7 @@ BOARD_USE_SPARSE_SYSTEM_IMAGE := true
 # Google Service and frp overlay
 BUILD_WITH_GOOGLE_MARKET := false
 BUILD_WITH_GOOGLE_MARKET_ALL := false
-BUILD_WITH_GOOGLE_FRP := false
+BUILD_WITH_GOOGLE_FRP := true
 BUILD_WITH_GOOGLE_GMS_EXPRESS := false
 
 # Add widevine L3 support
