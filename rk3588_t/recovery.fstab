@@ -10,6 +10,7 @@
 /dev/block/by-name/vendor_dlkm            /vendor_dlkm          ext4             defaults                  defaults
 /dev/block/by-name/odm_dlkm            /odm_dlkm          ext4             defaults                  defaults
 /dev/block/by-name/system_dlkm            /system_dlkm          ext4             defaults                  defaults
+/dev/block/by-name/init_boot            /init_boot          ext4             defaults                  defaults
 /dev/block/by-name/cache                 /cache               ext4             defaults                  defaults
 /dev/block/by-name/metadata              /metadata            ext4             defaults                  defaults
 /dev/block/by-name/userdata              /data                f2fs             defaults                  defaults
