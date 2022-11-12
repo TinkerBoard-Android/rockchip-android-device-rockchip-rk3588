@@ -34,7 +34,7 @@ PRODUCT_DEVICE := rk3588_s
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := rk3588_s
 PRODUCT_MANUFACTURER := rockchip
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 #
 ## add Rockchip properties
 #
@@ -42,5 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.compose_policy=1
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
+PRODUCT_PROPERTY_OVERRIDES += sys.mouse.presentation=1

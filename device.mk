@@ -70,8 +70,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sdkversion = $(CURRENT_SDK_VERSION) \
     vendor.gralloc.disable_afbc = 0
 
+ifneq ($(BOARD_CAMERA360_SUPPORT),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
+endif
 
 #
 # add Rockchip properties here
@@ -83,7 +85,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.audio.monitorOrientation=true \
                 debug.nfc.fw_download=false \
                 debug.nfc.se=false \
-                vendor.hwc.compose_policy=1 \
                 sys.wallpaper.rgb565=0 \
                 sf.power.control=2073600 \
                 sys.rkadb.root=0 \

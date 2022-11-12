@@ -21,6 +21,8 @@ on property:sys.boot_completed=1
 
     write /sys/class/devfreq/dmc/governor dmc_ondemand
 
+    write /dev/vehicle 88
+
 on charger
     chown system system /sys/class/devfreq/fb000000.gpu/governor
     chown system system /sys/class/devfreq/fb000000.gpu/min_freq
@@ -49,11 +51,11 @@ on boot
     chown system system /sys/class/thermal/thermal_zone1/policy
     chown system system /sys/class/thermal/thermal_zone2/policy
 
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/foreground/cpus 4-7
+    write /dev/cpuset/foreground/boost/cpus 4-7
     write /dev/cpuset/background/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-7
-    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/top-app/cpus 4-7
 
     # reduce schedul time to improve io performance
     write /sys/kernel/debug/sched_features NO_ENERGY_AWARE

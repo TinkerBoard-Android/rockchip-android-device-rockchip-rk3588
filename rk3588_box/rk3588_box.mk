@@ -129,6 +129,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV
 
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.compose_policy=1
 
 TARGET_BOARD_SUPPORT_4K_UI := false
 ifeq ($(TARGET_BOARD_SUPPORT_4K_UI),true)

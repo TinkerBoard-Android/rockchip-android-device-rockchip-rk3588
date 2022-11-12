@@ -34,13 +34,20 @@ PRODUCT_DEVICE := rk3588s_s
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := rk3588s_s
 PRODUCT_MANUFACTURER := rockchip
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 #
 ## add Rockchip properties
 #
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=280
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 PRODUCT_PROPERTY_OVERRIDES += ro.wifi.sleep.power.down=true
 PRODUCT_PROPERTY_OVERRIDES += persist.wifi.sleep.delay.ms=0
 PRODUCT_PROPERTY_OVERRIDES += persist.bt.power.down=true
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.compose_policy=1
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=DSI
 PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=HDMI-A,eDP
+
+#enable svep
+BOARD_USES_LIBSVEP := true
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.svep.mode=1
+#svep video policy, 0--no policy, 1--down 60fps video to 30fps when svep, 2--disable svep when 60fps video
+PRODUCT_PROPERTY_OVERRIDES += sys.svep.policy=1
