@@ -62,10 +62,14 @@ on boot
 
     chown system system /sys/devices/platform/fd5d0000.syscon/fd5d0000.syscon:usb2-phy@0/otg_mode
     chmod 0660 /sys/devices/platform/fd5d0000.syscon/fd5d0000.syscon:usb2-phy@0/otg_mode
-    
+
     # The initial load of RT process, set the range of 0-1024, set the RT task above 300 will preferentially run on the cpuB(cpu4-cpu7)
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
+    write /proc/sys/vm/dirty_ratio 10
+    write /proc/sys/vm/dirty_background_ratio 1
+    write /proc/sys/vm/dirty_writeback_centisecs 100
+    write /proc/sys/vm/dirty_expire_centisecs 500
 
 on init
     # Increased power consumption and CPU in exchange for memory
