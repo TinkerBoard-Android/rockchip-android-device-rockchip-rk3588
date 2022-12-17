@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
     librknnhal_bridge.rockchip \
     rockchip.hardware.neuralnetworks@1.0-impl \
     rockchip.hardware.neuralnetworks@1.0-service \
-    rknn_server
+    rknn_server \
+    hdcp2_tx_rx
 
 #$(call inherit-product-if-exists, vendor/rockchip/common/npu/npu.mk)
 
@@ -73,6 +74,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ifneq ($(BOARD_CAMERA360_SUPPORT),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
+endif
+
+USE_PRODUCT_HDCP2_HDMI_FW := $(shell test -f $(LOCAL_PATH)/hdcp2_hdmi.fw && echo true)
+ifeq ($(strip $(USE_PRODUCT_HDCP2_HDMI_FW)), true)
+    PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/hdcp2_hdmi.fw:vendor/firmware/hdcp2_hdmi.fw
 endif
 
 #
