@@ -19,6 +19,7 @@ genfscon sysfs /devices/platform/fdc30000.rkvdec-ccu/wakeup     u:object_r:sysfs
 genfscon sysfs /devices/platform/fdc38100.rkvdec-core/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/fdc48100.rkvdec-core/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/fde50000.dp/extcon     u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/fde60000.dp/extcon     u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/fdec0000.edp/extcon    u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/fe190000.pcie/wakeup   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/fe2e0000.mmc/mmc_host/mmc0     u:object_r:sysfs_mmc:s0
@@ -34,3 +35,6 @@ genfscon sysfs /devices/platform/feb20000.spi/spi_master/spi2/spi2.0/rk805-pwrke
 genfscon sysfs /devices/platform/feca0000.i2c/i2c-8/8-0022/power_supply/tcpm-source-psy-8-0022  u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/feca0000.i2c/i2c-8/8-0022/power_supply/tcpm-source-psy-8-0022/wakeup24 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/usbdrd3_0/fc000000.usb/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/fde80000.hdmi/uevent   u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/fdea0000.hdmi/uevent   u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/fdee0000.hdmirx-controller/uevent   u:object_r:sysfs_extcon:s0
