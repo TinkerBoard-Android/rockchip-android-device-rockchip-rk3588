@@ -85,6 +85,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.audio.monitorOrientation=true \
                 debug.nfc.fw_download=false \
                 debug.nfc.se=false \
+                vendor.hwc.compose_policy=1 \
                 sys.wallpaper.rgb565=0 \
                 sf.power.control=2073600 \
                 sys.rkadb.root=0 \
