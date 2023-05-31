@@ -64,6 +64,8 @@ BOARD_USES_GENERIC_INVENSENSE := false
 
 TARGET_BOARD_PLATFORM_PRODUCT ?= tablet
 
+BOARD_BUILD_GKI := false
+
 ENABLE_CPUSETS := true
 
 # Enable Dex compile opt as default
@@ -90,7 +92,7 @@ BUILD_WITH_GOOGLE_FRP := true
 BUILD_WITH_GOOGLE_GMS_EXPRESS := false
 
 #rknn
-BOARD_RKNN_SUPPORT := true
+BOARD_RKNN_SUPPORT := false
 
 # Add widevine L3 support
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
@@ -119,7 +121,7 @@ BOARD_SHOW_HDMI_SETTING ?= true
 # for dynamaic afbc target 
 BOARD_HS_DYNAMIC_AFBC_TARGET := false
 
-PRODUCT_HAVE_OPTEE := true
+PRODUCT_HAVE_OPTEE := false
 
 #trust is merging into uboot
 BOARD_ROCKCHIP_TRUST_MERGE_TO_UBOOT := true
