@@ -29,7 +29,6 @@ BOARD_LIGHT_SENSOR_SUPPORT := true
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
-    TARGET_RECOVERY_FSTAB := device/rockchip/rk3588/rk3588_u/recovery.fstab_AB
 endif
 PRODUCT_UBOOT_CONFIG := rk3588
 PRODUCT_KERNEL_DTS := rk3588-evb1-lp4-v10
