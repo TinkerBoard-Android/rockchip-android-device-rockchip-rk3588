@@ -38,6 +38,9 @@ TARGET_RK_GRALLOC_AIDL := true
 TARGET_RK_GRALLOC_VERSION := 4
 BOARD_USE_DRM := true
 
+# Use Vulkan Skia
+TARGET_USES_VULKAN := true
+
 # RenderScript
 # OVERRIDE_RS_DRIVER := libnvRSDriver.so
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a55

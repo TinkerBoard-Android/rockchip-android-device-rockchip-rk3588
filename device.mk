@@ -14,10 +14,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RockchipPinnerService
 
-# Disable partial updates
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.hwui.use_partial_updates=false
-
 # hdcp2
 PRODUCT_PACKAGES += \
     hdcp2_tx_rx
