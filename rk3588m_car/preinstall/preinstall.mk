@@ -1,1 +1,0 @@
-PRODUCT_PACKAGES += camera360
