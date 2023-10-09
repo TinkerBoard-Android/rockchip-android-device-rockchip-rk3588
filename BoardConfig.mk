@@ -2,7 +2,7 @@
 # Copyright (c) 2020 Rockchip Electronics Co., Ltd
 #
 
-CURRENT_SDK_VERSION := rk3588_ANDROID13.0_MID_V1.0
+CURRENT_SDK_VERSION := rk3588_ANDROID14.0_MID_V1.0
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -18,10 +18,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
-PRODUCT_UBOOT_CONFIG ?= rk3588
+PRODUCT_UBOOT_CONFIG ?= rk3588_defconfig
 PRODUCT_KERNEL_ARCH ?= arm64
 PRODUCT_KERNEL_DTS ?= rk3588-evb1-lp4-v10
-PRODUCT_KERNEL_CONFIG += pcie_wifi.config
 
 #BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address
@@ -65,7 +64,20 @@ BOARD_USES_GENERIC_INVENSENSE := false
 
 TARGET_BOARD_PLATFORM_PRODUCT ?= tablet
 
-BOARD_BUILD_GKI := false
+ifeq ($(strip $(BOARD_BUILD_GKI)), true)
+    # AB image definition
+    BOARD_USES_AB_IMAGE := true
+    BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := true
+    BOARD_ROCKCHIP_VIRTUAL_AB_COMPRESSION_WITH_GKI_ENABLE := true
+else
+    BOARD_USES_AB_IMAGE := false
+    BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
+    BOARD_ROCKCHIP_VIRTUAL_AB_COMPRESSION_WITH_GKI_ENABLE := false
+endif
+
+ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
+    include device/rockchip/common/BoardConfig_AB.mk
+endif
 
 ENABLE_CPUSETS := true
 
@@ -103,9 +115,6 @@ BOARD_CAMERA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_CAMERA_AIDL := true
 ALLOW_MISSING_DEPENDENCIES=true
-
-# Config GO Optimization
-BUILD_WITH_GO_OPT := true
 
 #Config omx to support codec type.
 BOARD_SUPPORT_VP9 := true

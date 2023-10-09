@@ -13,12 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include device/rockchip/rk3588/BoardConfig.mk
 BUILD_WITH_GO_OPT := false
-
-# AB image definition
-BOARD_USES_AB_IMAGE := false
-BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
+BOARD_BUILD_GKI := true
 
 BOARD_GRAVITY_SENSOR_SUPPORT := true
 BOARD_COMPASS_SENSOR_SUPPORT := true
@@ -27,11 +23,9 @@ BOARD_GYROSCOPE_SENSOR_SUPPORT := true
 BOARD_PROXIMITY_SENSOR_SUPPORT := true
 BOARD_LIGHT_SENSOR_SUPPORT := true
 
-ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-    include device/rockchip/common/BoardConfig_AB.mk
-endif
-PRODUCT_UBOOT_CONFIG := rk3588
 PRODUCT_KERNEL_DTS := rk3588-evb1-lp4-v10
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_HS_ETHERNET := true
+PRODUCT_KERNEL_CONFIG += pcie_wifi.config
+include device/rockchip/rk3588/BoardConfig.mk
