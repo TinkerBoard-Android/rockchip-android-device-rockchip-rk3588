@@ -196,7 +196,6 @@
 -->
 
         <!--  If your sensor driver don't support 720p stream, Please turn off this element -->
-<!--
         <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="6000000"
@@ -209,7 +208,7 @@
                    sampleRate="44100"
                    channels="1" />
         </EncoderProfile>
- -->
+
         <!--  If your sensor driver don't support 1080p stream, Please turn off this element -->
 
 
@@ -452,7 +451,6 @@
 
         <!--  If your sensor driver don't support 720p stream, Please turn off this element -->
 
-<!--
         <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="6000000"
@@ -465,7 +463,7 @@
                    sampleRate="44100"
                    channels="1" />
         </EncoderProfile>
--->
+
         <!--  If your sensor driver don't support 1080p stream, Please turn off this element -->
 
 <!--
