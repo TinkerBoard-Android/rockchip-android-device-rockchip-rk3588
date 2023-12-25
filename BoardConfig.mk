@@ -4,6 +4,10 @@
 
 CURRENT_SDK_VERSION := rk3588_ANDROID14.0_MID_V1.0
 
+# RK3588 freezes on Android 14 + Linux 6.1, here set to 34 U,
+# From now on, this property should never be changed.
+BOARD_SHIPPING_API_LEVEL := 34
+
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
