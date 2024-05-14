@@ -1,0 +1,7 @@
+
+on init
+    write /sys/devices/platform/fc000000.usb/power/control auto
+    write /sys/devices/platform/fc000000.usb/power/autosuspend_delay_ms 1000
+    write /sys/devices/platform/fc400000.usb/power/control auto
+    write /sys/devices/platform/fc400000.usb/power/autosuspend_delay_ms 1000
+
